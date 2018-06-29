@@ -15,6 +15,9 @@ class CreateLoyaltyDiscountsTable extends Migration
     {
         Schema::create('loyalty_discounts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('customer_id');
+            $table->integer('threshhold');
+            $table->smallInteger('time_unit');
             $table->timestamps();
         });
     }

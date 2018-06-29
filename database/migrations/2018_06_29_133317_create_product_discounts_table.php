@@ -15,6 +15,8 @@ class CreateProductDiscountsTable extends Migration
     {
         Schema::create('product_discounts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('product_id');
+            $table->integer('amount_to_buy')->nullable();
             $table->timestamps();
         });
     }

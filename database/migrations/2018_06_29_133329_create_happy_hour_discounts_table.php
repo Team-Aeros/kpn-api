@@ -15,6 +15,8 @@ class CreateHappyHourDiscountsTable extends Migration
     {
         Schema::create('happy_hour_discounts', function (Blueprint $table) {
             $table->increments('id');
+            $table->dateTime('start');
+            $table->dateTime('end');
             $table->timestamps();
         });
     }

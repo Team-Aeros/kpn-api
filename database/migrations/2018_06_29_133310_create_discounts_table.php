@@ -17,7 +17,7 @@ class CreateDiscountsTable extends Migration
             $table->increments('id');
             $table->smallInteger('type');
             $table->double('amount', 12, 2);
-            $table->integer('product_id');
+            $table->integer('price_plan_id');
             $table->integer('discountable_id');
             $table->string('discountable_type');
             $table->timestamps();

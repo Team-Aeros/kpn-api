@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Subscription;
+use Stripe\Customer;
 
 class SubscriptionController extends Controller
 {
     public function store(Request $request)
     {
+        $customer = Customer::findOrFail(1);
+        //$customer->newSubscription('main', 'standard')->create($request->stripeToken);
         Subscription::create($request->all());
     }
 

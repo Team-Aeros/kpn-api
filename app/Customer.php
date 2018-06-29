@@ -10,5 +10,13 @@ class Customer extends Model
 {
     use Billable;
 
+    public function subscription()
+    {
+        return $this->hasOne('App\Subscription');
+    }
 
+    public function subscriptions()
+    {
+        return $this->hasMany('App\Subscription');
+    }
 }

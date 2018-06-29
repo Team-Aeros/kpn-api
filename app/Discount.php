@@ -21,4 +21,12 @@ class Discount extends Model
     public function volumeDiscounts() {
         return $this->morphedByMany('App\VolumeDiscount', 'discountable');
     }
+
+    public function priceplans() {
+        return $this->belongsToMany('App\PricePlan');
+    }
+
+    public function priceplan() {
+        return $this->belongsTo('App\PricePlan');
+    }
 }

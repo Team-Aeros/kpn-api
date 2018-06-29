@@ -20,4 +20,4 @@ Route::resource('/discounts', 'DiscountController');
 Route::resource('/customers', 'CustomerController');
 Route::resource('/invoice', 'InvoiceController');
 Route::resource('/pricePlan', 'PricePlanController');
-
+Route::resource('/product', 'ProductController');

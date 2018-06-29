@@ -14,4 +14,9 @@ class SoapController extends Controller
         $response = $client->__soapCall("GetCustomerDetails", []);
         dd($response);
     }
+
+    public function getUser()
+    {
+        return 1;
+    }
 }

@@ -16,3 +16,4 @@ Auth::routes();
 Route::get('/', 'SoapController@show');
 
 Route::resource('/subscriptions', 'SubscriptionController');
+Route::resource('/discounts', 'DiscountController');
